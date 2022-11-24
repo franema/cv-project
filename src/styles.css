@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+}
+
+.inputs-container {
+    background-color: aliceblue;
+    width: 100%;
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr;
+    justify-items: center;
+    padding: 2%;
+
+}
+
+.generalInfo-container {
+    width: 80%;
+    display: grid;
+    grid-template: repeat(7, 1fr) / 1fr ;
+    padding: 2%;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 16px;
+    gap: 2%;
+}
+
+.edExp-container {
+    width: 80%;
+    display: grid;
+    grid-template: repeat(7, 1fr) / 1fr ;
+    padding: 2%;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 16px;
+    gap: 2%;
+}
+
+input {
+    background-color: rgb(168, 149, 149);
+    border: 1px solid rgb(177, 175, 175);
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    padding: 0 2%;
+}
+
+::placeholder {
+    color: aliceblue;
+}
+
