@@ -10,7 +10,9 @@ class main extends Component {
         super(props)
 
         this.state = {
-
+            firstName:"",
+            lastName: "",
+            title:"",
             university: "",
             degree: "",
             subject: "",
@@ -36,10 +38,10 @@ class main extends Component {
         return (
             <div className='main-container'>
                 <div className="inputs-container">
-                    <GeneralInfo></GeneralInfo>
+                    <GeneralInfo handleChange={this.handleChange}></GeneralInfo>
                     <EdExp handleChange={this.handleChange}></EdExp>
                 </div>
-                <div className="display-container">
+                <div className="display-container">                  
                     <ContentDisplay edInfo={this.state}></ContentDisplay>
                 </div>
             </div>

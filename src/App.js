@@ -1,4 +1,5 @@
 import Main from "./Components/Main";
+import "./styles.css"
 
 
 function App() {
