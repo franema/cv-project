@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import GeneralInfo from './CV-Inputs/GeneralInfo'
 import EdExp from './CV-Inputs/EdExp'
 import ContentDisplay from './CV-Display/ContentDisplay'
+import ParctilcaExp from './CV-Inputs/PracticalExp'
 
 
 class main extends Component {
@@ -13,12 +14,19 @@ class main extends Component {
             firstName:"",
             lastName: "",
             title:"",
+            adress:"",
+            phone: "",
+            email:"",
+            description: "",
             university: "",
             degree: "",
             subject: "",
-            from: "",
-            to: ""
-
+            ed_from: "",
+            ed_to: "",
+            position:"",
+            company:"",
+            pr_from:"",
+            pr_to:""
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -39,10 +47,11 @@ class main extends Component {
             <div className='main-container'>
                 <div className="inputs-container">
                     <GeneralInfo handleChange={this.handleChange}></GeneralInfo>
+                    <ParctilcaExp handleChange={this.handleChange}></ParctilcaExp>
                     <EdExp handleChange={this.handleChange}></EdExp>
                 </div>
                 <div className="display-container">                  
-                    <ContentDisplay edInfo={this.state}></ContentDisplay>
+                    <ContentDisplay cvInfo={this.state}></ContentDisplay>
                 </div>
             </div>
         )

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 
 .main-container {
@@ -16,7 +17,7 @@
     background-color: aliceblue;
     width: 100%;
     display: grid;
-    grid-template: 1fr 1fr/ 1fr;
+    grid-template: 1fr 1fr 1fr/ 1fr;
     justify-items: center;
     padding: 2%;
     border: 1px solid rgb(219, 219, 219);
@@ -26,7 +27,7 @@
 .generalInfo-container {
     width: 80%;
     display: grid;
-    grid-template: repeat(7, 1fr) / 1fr ;
+    grid-template: repeat(8, 1fr) / 1fr ;
     padding: 2%;
     
     gap: 2%;
@@ -35,13 +36,20 @@
 .edExp-container {
     width: 80%;
     display: grid;
-    grid-template: repeat(7, 1fr) / 1fr ;
+    grid-template: repeat(8, 1fr) / 1fr ;
     padding: 2%;
-    
     gap: 2%;
 }
 
-input {
+.practical-container {
+    width: 80%;
+    display: grid;
+    grid-template: repeat(7, 1fr) / 1fr ;
+    padding: 2%;
+    gap: 2%;
+}
+
+.info-input {
     background-color: rgb(168, 149, 149);
     border: 1px solid rgb(177, 175, 175);
     border-radius: 6px;
@@ -80,16 +88,56 @@ input {
     font-size: 2rem;
 }
 
-.cv-education {
+.cv-content {
+    display: grid;
+    grid-template: 1fr / 25% 75% ;
+    width: 100%;
+}
+
+.cv-main {
     padding: 2% 4%;
     color: rgb(95, 95, 204);
     display: grid;
+    grid-template: 1fr 3fr 3fr / 1fr;
     gap: 4%;
+    width: 100%;
+}
+
+.cv-description {
+    overflow:auto;
+}
+
+.cv-experience {
+    display: grid;
+    width: 100%;
+}
+
+.cv-experience>p {
+    padding-left: 4%;
+}
+
+.cv-education {
+    display: grid;
+    gap: 4%;
+    width: 100%;
 }
 
 .cv-education>p {
     padding: 0 0 0 4%;
 }
 
-/* .info-display {
-} */
+.cv-contact {
+    background-color: rgb(123, 137, 167);
+    min-height: 100vh;
+    width: 100%;
+    border-radius: 0 0 0 6px;
+    color: aliceblue;
+    padding: 15%;
+    overflow: hidden;
+
+}
+
+.cv-contact>p {
+    overflow-wrap: break-word;
+    margin: 15% 0;
+}
