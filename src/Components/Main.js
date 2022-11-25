@@ -35,14 +35,11 @@ class main extends Component {
     handleChange(e) {
         this.setState({
             [e.target.id]: (e.target.value)
-        }, () => {
-            console.log(this.state)
         })
     }
 
     render() {
 
-        const { university, degree, subject, from, to } = this.state
         return (
             <div className='main-container'>
                 <div className="inputs-container">
